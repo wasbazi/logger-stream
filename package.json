@@ -9,7 +9,7 @@
   "repository" : {
     "type" : "git",
     "url" : "http://github.com/wasbazi/logger-stream"
-  }
+  },
   "scripts": {
     "test": "make test"
   },
