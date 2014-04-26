@@ -1,0 +1,30 @@
+{
+  "name": "logger-stream",
+  "version": "0.0.1",
+  "description": "A stream that logs things piped to it. Built with Bunyan in mind",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository" : {
+    "type" : "git",
+    "url" : "http://github.com/wasbazi/logger-stream"
+  }
+  "scripts": {
+    "test": "make test"
+  },
+  "keywords": [
+    "log",
+    "logger",
+    "stream",
+    "bunyan"
+  ],
+  "author": "Avi Weinstock-Herman",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "~1.18.2",
+    "chai": "~1.9.1",
+    "sinon": "~1.9.1",
+    "sinon-chai": "~2.5.0"
+  }
+}
