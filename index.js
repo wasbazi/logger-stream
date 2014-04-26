@@ -4,6 +4,10 @@ var util = require('util')
 function Logger(opts) {
   opts = opts || {}
 
+  if (typeof opts.objectMode === 'undefined') {
+    opts.objectMode = true
+  }
+
   this.logger = opts.logger
   this.level = opts.level || 'info'
 

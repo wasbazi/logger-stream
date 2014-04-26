@@ -20,7 +20,7 @@ describe('Log test', function(){
   describe('defaults', function(){
     beforeEach(function(){
       loggerStream = new LoggerStream({
-        objectMode: true,
+        // objectMode: true,
         logger: logger
       })
     })
@@ -28,12 +28,25 @@ describe('Log test', function(){
     it('sets the logger level to info', function(){
       expect(loggerStream.level).to.eql('info')
     })
+
+    it('sets the objectMode to true', function(){
+      expect(loggerStream._readableState.objectMode).to.eql(true)
+    })
+
+    it('allows objectMode to be overwritten', function(){
+      loggerStream = new LoggerStream({
+        objectMode: false,
+        logger: logger
+      })
+
+      expect(loggerStream._readableState.objectMode).to.eql(false)
+    })
   })
 
   describe('in objectMode', function(){
     beforeEach(function(){
       loggerStream = new LoggerStream({
-        objectMode: true,
+        // objectMode: true,
         logger: logger,
         level: 'info'
       })
